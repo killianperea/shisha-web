@@ -1,12 +1,15 @@
 {
     "rewrites": [
         {
-            "source": "/:match*",
+            "source": "/app/:match*",
             "destination": "https://shisha-nextjs.vercel.app/:match*"
         },
         {
             "source": "/studio/:match*",
             "destination": "https://shisha-sanity.vercel.app/:match*"
         }
-    ]
+    ],
+    "redirects": [
+        { "source": "/", "destination": "/app" }
+      ]
 }
