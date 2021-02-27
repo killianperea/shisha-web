@@ -4,7 +4,8 @@
   "author": "Killian Perea Ruiz <killianperea@gmail.com>",
   "scripts": {
     "bootstrap-hoist": "lerna bootstrap --hoist",
-    "bootstrap": "lerna bootstrap"
+    "bootstrap": "lerna bootstrap",
+    "build": "cd ./packages/shisha-web-nextjs && npm run build --loglevel verbose"
   },
   "devDependencies": {
     "lerna": "^3.22.1"
