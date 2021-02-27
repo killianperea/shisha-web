@@ -3,7 +3,7 @@
   "private": true,
   "author": "Killian Perea Ruiz <killianperea@gmail.com>",
   "scripts": {
-    "bootstrap-hoist": "lerna bootstrap --hoist",
+    "bootstrap-hoist": "npx lerna bootstrap --hoist",
     "bootstrap": "npx lerna bootstrap",
     "build-nextjs": "cd ./packages/shisha-web-nextjs && npm run build && mv nextjs-web ../../public",
     "build-sanity":"cd ./packages/shisha-web-sanity && npm run build && mv dist ../../public/studio",
