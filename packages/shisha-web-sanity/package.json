@@ -28,5 +28,7 @@
     "sanity-plugin-graph-view": "^1.0.4",
     "sanity-plugin-media": "^1.1.2"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "sanity": "2.2.6"
+  }
 }
