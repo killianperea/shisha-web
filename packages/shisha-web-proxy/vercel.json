@@ -1,8 +1,8 @@
 {
     "rewrites": [
         {
-            "source": "/:match*",
-            "destination": "https://shisha-nextjs.vercel.app/:match*"
+            "source": "/",
+            "destination": "https://shisha-nextjs.vercel.app/"
         },
         {
             "source": "/studio/:match*",
