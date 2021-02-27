@@ -1,8 +1,7 @@
 {
   "root": true,
   "project": {
-    "name": "shisha-web-sanity",
-    "basePath": "/studio"
+    "name": "shisha-web-sanity"
   },
   "api": {
     "projectId": "e6lolad4",
