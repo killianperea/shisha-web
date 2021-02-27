@@ -13,7 +13,9 @@ node_modules/
 /out/
 
 # production
-build/
+public/
+nextjs-web/
+sanity-studio-web/
 
 # misc
 .DS_Store

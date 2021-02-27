@@ -5,7 +5,9 @@
   "scripts": {
     "bootstrap-hoist": "lerna bootstrap --hoist",
     "bootstrap": "npx lerna bootstrap",
-    "build": "cd ./packages/shisha-web-nextjs && npm run build --loglevel verbose"
+    "build-nextjs": "cd ./packages/shisha-web-nextjs && npm run build && mv nextjs-web ../../public",
+    "build-sanity":"cd ./packages/shisha-web-sanity && npm run build && mv dist ../../public/studio",
+    "build": "npm run build-nextjs && npm run build-sanity"
   },
   "devDependencies": {
     "lerna": "^3.22.1"
