@@ -1,5 +1,5 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Head from 'next/head';
+import styles from '../styles/Home.module.css';
 
 const Home = (): JSX.Element => {
   return (
@@ -61,7 +61,7 @@ const Home = (): JSX.Element => {
         </a>
       </footer>
     </div>
-  )
-}
+  );
+};
 
 export default Home;
