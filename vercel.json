@@ -1,12 +1,8 @@
 {
     "rewrites": [
         {
-            "source": "/",
-            "destination": "https://shisha-nextjs.vercel.app/"
-        },
-        {
-            "source": "/studio",
-            "destination": "https://shisha-sanity.vercel.app/"
+            "source": "/studio/(.*)",
+            "destination": "/studio/index.html"
         }
     ]
 }
