@@ -5,11 +5,19 @@
   "scripts": {
     "bootstrap-hoist": "npx lerna bootstrap --hoist",
     "bootstrap": "npx lerna bootstrap",
-    "build-nextjs": "cd ./packages/shisha-web-nextjs && npm run build && mv .next ../../.next",
-    "build-sanity":"cd ./packages/shisha-web-sanity && npm run build && mv dist ../../.next/studio",
-    "build": "npm run build-nextjs && npm run build-sanity"
+    "dev": "concurrently \"next --port $PORT\" \"cd studio && sanity start\"",
+    "build": "cd packages/shisha-web-sanity && npm run build && cd ../shisha-web-nextjs && npm run build",
+    "start": "vercel dev",
+    "postinstall": "lerna bootstrap"
   },
   "devDependencies": {
-    "lerna": "^3.22.1"
+    "lerna": "^3.22.1",
+    "concurrently": "^6.0.0"
+  },
+  "dependencies": {
+    "@sanity/cli": "^2.0.5",
+    "next": "^9.5.5",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0"
   }
 }
