@@ -5,8 +5,8 @@
             "destination": "https://shisha-nextjs.vercel.app/"
         },
         {
-            "source": "/studio/:match*",
-            "destination": "https://shisha-sanity.vercel.app/:match*"
+            "source": "/studio",
+            "destination": "https://shisha-sanity.vercel.app/"
         }
     ]
 }

@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
+import Link from 'next/link'
 
 const Home = (): JSX.Element => {
   return (
@@ -11,7 +12,7 @@ const Home = (): JSX.Element => {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Welcome to <Link href="/blog">Blog</Link>
         </h1>
 
         <p className={styles.description}>
