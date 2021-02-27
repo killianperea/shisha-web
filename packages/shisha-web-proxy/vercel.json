@@ -5,8 +5,11 @@
             "destination": "https://shisha-nextjs.vercel.app/"
         },
         {
-            "source": "/studio",
-            "destination": "https://shisha-sanity.vercel.app/"
+            "source": "/studio/:match*",
+            "destination": "https://shisha-sanity.vercel.app/:match*"
         }
-    ]
+    ],
+    "redirects": [
+        { "source": "/", "destination": "/" }
+      ]
 }
