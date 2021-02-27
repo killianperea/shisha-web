@@ -5,8 +5,8 @@
   "scripts": {
     "bootstrap-hoist": "npx lerna bootstrap --hoist",
     "bootstrap": "npx lerna bootstrap",
-    "build-nextjs": "cd ./packages/shisha-web-nextjs && npm run build && mv nextjs-web ../../public",
-    "build-sanity":"cd ./packages/shisha-web-sanity && npm run build && mv dist ../../public/studio",
+    "build-nextjs": "cd ./packages/shisha-web-nextjs && npm run build && mv .next ../../.next",
+    "build-sanity":"cd ./packages/shisha-web-sanity && npm run build && mv dist ../../.next/studio",
     "build": "npm run build-nextjs && npm run build-sanity"
   },
   "devDependencies": {
