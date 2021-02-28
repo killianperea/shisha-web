@@ -1,4 +1,4 @@
-import { sanityConfig } from './config';
+import { sanityConfig } from '../constants/sanityConfig';
 import imageUrlBuilder from '@sanity/image-url';
 import { SanityImageSource } from '@sanity/image-url/lib/types/types';
 import { ImageUrlBuilder } from '@sanity/image-url/lib/types/builder';
