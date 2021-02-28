@@ -5,9 +5,10 @@
   "author": "Killian Perea Ruiz <killianperea@gmail.com>",
   "scripts": {
     "dev": "next",
-    "build": "next build && mv .next ../../.next",
+    "build": "next build && next export -o ../../public/",
     "start": "next start",
-    "type-check": "tsc"
+    "type-check": "tsc",
+    "default": "next .next"
   },
   "dependencies": {
     "@sanity/block-content-to-react": "^2.0.7",
