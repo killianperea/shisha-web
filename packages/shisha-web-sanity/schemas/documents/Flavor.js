@@ -8,5 +8,6 @@ export default {
             name: "name",
             type: "string",
         }
-    ]
+    ],
+    liveEdit: true
 }

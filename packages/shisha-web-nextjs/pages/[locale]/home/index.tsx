@@ -2,13 +2,17 @@ import { GetStaticPaths, GetStaticProps, GetStaticPropsContext, NextPage } from 
 import { ParsedUrlQuery } from "querystring";
 import { locales } from "../../../constants/languageConfig";
 
-const Home: NextPage<{ locale: string }> = ({ locale }) => {
+const Home: NextPage<{ locale: string}> = ({ locale }) => {
     return (
-        <div>Home with {locale}</div>
+        <>
+            <div>Home with {locale}</div>
+        </>
     );
 };
 
 export const getStaticProps: GetStaticProps = async (ctx: GetStaticPropsContext<ParsedUrlQuery>) => {
+
+
     return {
         props: {
             locale: ctx.params?.locale

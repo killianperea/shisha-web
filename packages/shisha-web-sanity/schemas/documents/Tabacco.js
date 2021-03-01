@@ -33,5 +33,6 @@ export default {
                 to: [{ type: 'flavor' }]
             }]
         }
-    ]
+    ],
+    liveEdit: true
 }

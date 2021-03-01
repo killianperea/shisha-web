@@ -22,5 +22,6 @@ export default {
                 to: [{ type: 'tabacco' }]
             }]
         }
-    ]
+    ],
+    liveEdit: true
 }
