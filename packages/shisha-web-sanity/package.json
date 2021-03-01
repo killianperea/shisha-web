@@ -1,7 +1,7 @@
 {
   "name": "shisha-web-sanity",
   "private": true,
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "",
   "main": "package.json",
   "author": "Killian Perea Ruiz <killianperea@gmail.com>",
