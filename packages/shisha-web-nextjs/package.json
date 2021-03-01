@@ -5,9 +5,8 @@
   "author": "Killian Perea Ruiz <killianperea@gmail.com>",
   "scripts": {
     "dev": "next",
-    "build": "next build",
-    "start": "next start",
-    "export": "next export -o ../../public"
+    "build": "next build && mv .next ../../.next",
+    "start": "next start"
   },
   "dependencies": {
     "@chakra-ui/react": "^1.3.3",

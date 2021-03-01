@@ -6,7 +6,10 @@
     "bootstrap": "npx lerna bootstrap",
     "build-sanity": "cd packages/shisha-web-sanity && npm run build",
     "build-nextjs": "cd packages/shisha-web-nextjs && npm run build",
-    "export": "cd packages/shisha-web-nextjs && npm run export",
-    "build": "npm run build-sanity && npm run build-nextjs"
+    "build": "npm run build-sanity && npm run build-nextjs",
+    "postinstall": "npm run bootstrap"
+  },
+  "devDependencies": {
+    "next": "latest"
   }
 }
