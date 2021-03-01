@@ -7,8 +7,7 @@
     "build-sanity": "cd packages/shisha-web-sanity && npm run build",
     "build-nextjs": "cd packages/shisha-web-nextjs && npm run build",
     "build-export": "cd packages/shisha-web-nextjs && npm run export",
-    "build": "npm run build-sanity && npm run build-nextjs",
-    "postinstall": "npm run bootstrap"
+    "build": "npm run build-sanity && npm run build-nextjs"
   },
   "devDependencies": {
     "next": "latest"
