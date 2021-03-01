@@ -2,9 +2,9 @@ import { GetStaticPaths, GetStaticProps, GetStaticPropsContext, NextPage } from 
 import { ParsedUrlQuery } from "querystring";
 import { locales } from "../../../constants/languageConfig";
 
-const Blog: NextPage<{ locale: string }> = ({ locale }) => {
+const Home: NextPage<{ locale: string }> = ({ locale }) => {
     return (
-        <div>Blog {locale}</div>
+        <div>Home with {locale}</div>
     );
 };
 
@@ -23,4 +23,4 @@ export const getStaticPaths: GetStaticPaths = async () => {
     };
 };
 
-export default Blog;
+export default Home;

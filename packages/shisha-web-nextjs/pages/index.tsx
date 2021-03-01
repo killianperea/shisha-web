@@ -6,7 +6,7 @@ import { useRouter } from 'next/router';
 const Home = (): JSX.Element => {
   const router = useRouter();
   useEffect(() => {
-    router.replace(`/${getInitialLocale()}`);
+    router.push(`/[locale]/home`,`/${getInitialLocale()}/home`);
   }, []);
 
   return (

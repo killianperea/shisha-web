@@ -5,7 +5,7 @@
   "author": "Killian Perea Ruiz <killianperea@gmail.com>",
   "scripts": {
     "dev": "next",
-    "build": "next build && next export -o ../../public/",
+    "build": "next build && mv .next ../../.next",
     "start": "next start"
   },
   "dependencies": {
