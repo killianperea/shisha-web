@@ -1,6 +1,7 @@
 {
-  "redirects": [
-    { "source": "/", "destination": "/studio" },
-    { "source": "\/studio(.*)", "destination": "/studio" }
-  ]
-}
+    "version": 2,
+    "routes": [
+      { "handle": "filesystem" },
+      { "src": "/.*", "dest": "/studio/index.html" }
+    ]
+  }
