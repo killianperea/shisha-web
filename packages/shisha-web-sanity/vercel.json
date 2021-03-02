@@ -4,7 +4,7 @@
     { "handle": "filesystem" },
     { "src": "/.*", "dest": "/index.html" }
   ],
-  "redirects":[
-    { "source": "/", "destination": "/studio" }
+  "redirects": [
+    { "source": "/(.*)", "destination": "/studio" }
   ]
 }
