@@ -1,5 +1,7 @@
 {
   "redirects": [
-    { "source": "/(.*)", "destination": "/studio" }
+    { "source": "/", "destination": "/studio" },
+    { "source": "\/studio(.*)", "destination": "/studio" }
+    
   ]
 }
