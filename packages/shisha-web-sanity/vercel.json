@@ -2,9 +2,9 @@
   "version": 2,
   "routes": [
     { "handle": "filesystem" },
-    { "src": "/.*", "dest": "/index.html" }
+    { "src": "/.*", "dest": "/studio/index.html" }
   ],
   "redirects": [
-    { "source": "/(.*)", "destination": "/studio" }
+    { "source": "/", "destination": "/studio" }
   ]
 }
