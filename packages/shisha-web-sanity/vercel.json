@@ -1,8 +1,4 @@
 {
-  "routes": [
-    { "handle": "filesystem" },
-    { "src": "/.*", "dest": "/studio/index.html" }
-  ],
   "redirects": [
     { "source": "/", "destination": "/studio" }
   ]
