@@ -18,4 +18,4 @@ export default createSchema({
     Tabacco,
     Flavor
   ]),
-})
+});
