@@ -1,23 +1,6 @@
-import Head from 'next/head';
-import { getInitialLocale } from "../translations/getInitialLocale";
-import { useEffect } from 'react';
-import { useRouter } from 'next/router';
+import RedirectHome from "../component/RedirectHome";
 
-const Home = (): JSX.Element => {
-  const router = useRouter();
-  useEffect(() => {
-    router.push(`/[locale]/home`,`/${getInitialLocale()}/home`);
-  }, []);
 
-  return (
-    <>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <div>:(</div>
-    </>
-  );
-};
+const RootPage = (): JSX.Element => <RedirectHome />;
 
-export default Home;
+export default RootPage;

@@ -1,11 +1,21 @@
 import { GetStaticPaths, GetStaticProps, GetStaticPropsContext, NextPage } from "next";
 import { ParsedUrlQuery } from "querystring";
+import Layout from "../../../component/ui/Layout";
 import { locales } from "../../../constants/languageConfig";
+import ContextCurrentPage from "../../../contexts/ContextCurrentPage";
 
-const Home: NextPage<{ locale: string}> = ({ locale }) => {
+const Home: NextPage<{ locale: string }> = ({ locale }) => {
+    const currentPageStatus = {
+        currentUrl: `/home`,
+        locale
+    }
     return (
         <>
-            <div>Home with {locale}</div>
+            <ContextCurrentPage.Provider value={currentPageStatus}>
+                <Layout withHeader withFooter>
+                    <div>Home with {locale}</div>
+                </Layout>
+            </ContextCurrentPage.Provider>
         </>
     );
 };

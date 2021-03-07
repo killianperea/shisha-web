@@ -1,11 +1,12 @@
 import { ChakraProvider } from '@chakra-ui/react';
 import '../styles/globals.css';
+import CustomTheme from '../theme/CustomTheme';
 
-const MyApp = ({ Component, pageProps }): JSX.Element => {
+const App = ({ Component, pageProps }): JSX.Element => {
   return (
-    <ChakraProvider>
+    <ChakraProvider theme={CustomTheme}>
       <Component {...pageProps} />
     </ChakraProvider>
   )
 };
-export default MyApp;
+export default App;
