@@ -14,7 +14,7 @@ const Header = (props): JSX.Element => {
             <Logo width="100px" />
             <MenuToggle toggle={toggle} isOpen={isOpen}></MenuToggle>
             <MenuLinks isOpen={isOpen} />
-            <ToggleThemeColor/>
+            <ToggleThemeColor />
         </NavBarContainer>
     )
 }
