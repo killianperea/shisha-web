@@ -11,7 +11,7 @@ const Header = (props): JSX.Element => {
 
     return (
         <NavBarContainer {...props}>
-            <Logo width="100px" />
+            <Logo width={["90px", "90px", "150px", "150px"]} />
             <MenuToggle toggle={toggle} isOpen={isOpen}></MenuToggle>
             <MenuLinks isOpen={isOpen} />
             <ToggleThemeColor />

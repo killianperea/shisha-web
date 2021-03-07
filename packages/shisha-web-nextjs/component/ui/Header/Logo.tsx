@@ -1,10 +1,11 @@
 
-import { Box, Text } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
+import LogoIcon from "../../LogoIcon";
 
 const Logo = (props): JSX.Element => {
     return (
         <Box {...props}>
-            <Text fontSize="lg" fontWeight="bold">Logo</Text>
+            <LogoIcon />
         </Box>
     )
 }
