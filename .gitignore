@@ -13,7 +13,7 @@ node_modules/
 /out/
 
 # production
-public/
+packages/shisha-web-sanity/public
 nextjs-web/
 sanity-studio-web/
 
