@@ -10,6 +10,10 @@ customBreakpoints['xl'] = customBreakpoints[3];
 customBreakpoints['2xl'] = customBreakpoints[4];
 
 export default extendTheme({
+  fonts: {
+    heading: 'Overpass',
+    body: 'Overpass'
+  },
   breakpoints: customBreakpoints as any,
   config: {
     initialColorMode: 'light',

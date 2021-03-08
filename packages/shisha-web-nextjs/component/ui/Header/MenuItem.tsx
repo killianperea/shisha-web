@@ -1,26 +1,21 @@
-import { Link, Text } from "@chakra-ui/react";
+import { Button, Text } from "@chakra-ui/react";
+import { useRouter } from "next/router";
 
 
-const MenuItem = ({ children, to = "/", isActive = false }) => {
+const MenuItem = ({ children, to = "/", isActive = false, ...props }) => {
+    const router = useRouter();
     return (
-        <Link href={to}>
-            <Text
-                display="block"
-                fontWeight={[
-                    isActive ? 'bold' : 'normal',
-                    isActive ? 'bold' : 'normal',
-                    'normal',
-                    'normal'
-                ]}
-                borderBottom={[
-                    'transparent',
-                    'transparent',
-                    isActive ? '1px solid' : null,
-                    isActive ? '1px solid' : null
-                ]}>
+        <Button
+            variant="unstyled"
+            isActive={isActive}
+            onClick={() => {
+                router.push(to);
+            }}
+            {...props} >
+            <Text>
                 {children}
             </Text>
-        </Link>
+        </Button>
     )
 }
 

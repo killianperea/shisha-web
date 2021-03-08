@@ -4,7 +4,7 @@ import LogoIcon from "../../LogoIcon";
 
 const Logo = (props): JSX.Element => {
     return (
-        <Box {...props}>
+        <Box id="logo" {...props}>
             <LogoIcon />
         </Box>
     )
