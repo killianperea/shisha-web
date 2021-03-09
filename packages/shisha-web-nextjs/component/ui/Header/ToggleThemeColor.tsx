@@ -6,7 +6,7 @@ const ToggleThemeColor = ({ ...props }): JSX.Element => {
     return (
         <HStack align="center" {...props}>
             <Box as={FiSun} size="15px" />
-            <Switch id="toggle-theme-color" isChecked={colorMode === 'dark'} onChange={toggleColorMode} />
+            <Switch display="flex" id="toggle-theme-color" isChecked={colorMode === 'dark'} onChange={toggleColorMode} />
             <Box as={FiMoon} size="15px" />
         </HStack>
 
