@@ -1,6 +1,7 @@
-import { Button, Flex, Text } from "@chakra-ui/react";
+import { Flex, Text } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 import { BsChevronLeft } from "react-icons/bs";
+import MenuButton from "../../global/MenuButton";
 
 const MenuItemDrawer = ({ children, to = "/", isActive = false, onClose }): JSX.Element => {
     const router = useRouter();
@@ -12,7 +13,9 @@ const MenuItemDrawer = ({ children, to = "/", isActive = false, onClose }): JSX.
     const activeFunc = isActive ? onClose : pushRoute;
 
     return (
-        <Button
+        <MenuButton
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
             padding="0 15px"
             width="100%"
             display="flex"
@@ -25,7 +28,7 @@ const MenuItemDrawer = ({ children, to = "/", isActive = false, onClose }): JSX.
                     {children}
                 </Text>
             </Flex>
-        </Button>
+        </MenuButton>
     )
 }
 export default MenuItemDrawer;

@@ -2,8 +2,7 @@ import { Text, useColorModeValue } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 import MenuButton from "../../global/MenuButton";
 
-
-const MenuItem = ({ children, to = "/", isActive = false, ...props }) => {
+const FooterButtonItem = ({ children, to = "/" , ...props }) => {
     const router = useRouter();
 
     const buttonColorHover = useColorModeValue("gray.700", "gray.300");
@@ -11,11 +10,11 @@ const MenuItem = ({ children, to = "/", isActive = false, ...props }) => {
     return (
         <MenuButton
             variant="unstyled"
-            isActive={isActive}
             onClick={() => {
                 router.push(to);
             }}
             color="gray.500"
+            fontSize="12px"
             _active={{
                 color: buttonColorActive
             }}
@@ -30,4 +29,4 @@ const MenuItem = ({ children, to = "/", isActive = false, ...props }) => {
     )
 }
 
-export default MenuItem
+export default FooterButtonItem

@@ -28,6 +28,7 @@ const MenuMobile = ({ ...props }) => {
     const router = useRouter();
 
     const borderColorDivider = useColorModeValue("gray.400", "gray.200");
+    const bgColorDrawer = useColorModeValue("gray.100", "gray.700");
 
     return (
         < >
@@ -37,6 +38,7 @@ const MenuMobile = ({ ...props }) => {
                 onClick={onOpen}
                 aria-label="Open menu"
                 icon={<BsJustify />}
+                fontSize="25px"
                 {...props} />
             <Drawer
                 isOpen={isOpen}
@@ -45,7 +47,7 @@ const MenuMobile = ({ ...props }) => {
                 finalFocusRef={btnRef}
                 scrollBehavior="inside">
                 <DrawerOverlay>
-                    <DrawerContent>
+                    <DrawerContent backgroundColor={bgColorDrawer}>
                         <DrawerCloseButton fontSize="1rem" />
                         <DrawerHeader>
                             <ToggleThemeColor />
