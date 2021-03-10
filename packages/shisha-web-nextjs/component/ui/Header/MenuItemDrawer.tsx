@@ -2,7 +2,7 @@ import { Button, Flex, Text } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 import { BsChevronLeft } from "react-icons/bs";
 
-const MenuItemDrawer = ({ children, to = "/", isActive = false, onClose }): JSX.Element => {
+const MenuItemDrawer = ({ children, to = "/", isActive = false, onClose, ...props }): JSX.Element => {
     const router = useRouter();
 
     const pushRoute = () => {
@@ -18,7 +18,8 @@ const MenuItemDrawer = ({ children, to = "/", isActive = false, onClose }): JSX.
             display="flex"
             variant="unstyled"
             isActive={isActive}
-            onClick={activeFunc}>
+            onClick={activeFunc}
+            {...props}>
             <BsChevronLeft size="1.5rem" />
             <Flex flex="1" justifyContent="center" mr="24px">
                 <Text>

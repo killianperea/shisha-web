@@ -24,7 +24,7 @@ const MenuMobile = ({ ...props }) => {
 
     const { isOpen, onOpen, onClose } = useDisclosure();
     const btnRef = useRef();
-    const { locale } = useContext(ContextCurrentPage);
+    const { locale, menuItems } = useContext(ContextCurrentPage);
     const router = useRouter();
 
     const borderColorDivider = useColorModeValue("gray.400", "gray.200");
@@ -59,19 +59,17 @@ const MenuMobile = ({ ...props }) => {
                         <DrawerBody px="0">
                             <VStack divider={<StackDivider borderColor={borderColorDivider} />}>
                                 <StackDivider borderColor={borderColorDivider} />
-                                <MenuItemDrawer
-                                    onClose={onClose}
-                                    to={`/${locale}/home`}
-                                    isActive={`/${locale}/home` === router.asPath}>
-                                    Home
-                                </MenuItemDrawer>
-                                <MenuItemDrawer
-                                    onClose={onClose}
-                                    to={`/${locale}/about`}
-                                    isActive={`/${locale}/about` === router.asPath}>
-                                    About
-                                </MenuItemDrawer>
-
+                                {menuItems.map(menuItem => {
+                                    return (
+                                        <MenuItemDrawer key={menuItem.path}
+                                            id={`menuItemMobile-${menuItem.path}`}
+                                            onClose={onClose}
+                                            to={`/${locale}${menuItem.path}`}
+                                            isActive={`/${locale}${menuItem.path}` === router.asPath}>
+                                            {menuItem.name[locale]}
+                                        </MenuItemDrawer>
+                                    )
+                                })}
                                 <StackDivider borderColor={borderColorDivider} />
                             </VStack>
                         </DrawerBody>

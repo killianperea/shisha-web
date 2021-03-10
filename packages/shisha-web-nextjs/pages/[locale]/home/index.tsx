@@ -3,12 +3,16 @@ import { ParsedUrlQuery } from "querystring";
 import Layout from "../../../component/ui/Layout";
 import { locales } from "../../../constants/languageConfig";
 import ContextCurrentPage from "../../../contexts/ContextCurrentPage";
+import { SanityApi } from "../../../lib/sanityApi";
+import { Utils } from "../../../lib/utils";
+import { MenuItemModel } from "../../../models/MenuItemModel";
 
-const Home: NextPage<{ locale: string }> = ({ locale }) => {
+const Home: NextPage<{ locale: string, menuItems: MenuItemModel[] }> = ({ locale, menuItems }) => {
 
     const currentPageStatus = {
         currentUrl: `/home`,
-        locale
+        locale,
+        menuItems
     }
 
     return (
@@ -32,9 +36,12 @@ const Home: NextPage<{ locale: string }> = ({ locale }) => {
 };
 
 export const getStaticProps: GetStaticProps = async (ctx: GetStaticPropsContext<ParsedUrlQuery>) => {
+
+    const menuItems = await SanityApi.getMenuItems();
     return {
         props: {
-            locale: ctx.params?.locale
+            locale: ctx.params?.locale,
+            menuItems: Utils.serialize(menuItems)
         },
     };
 };
