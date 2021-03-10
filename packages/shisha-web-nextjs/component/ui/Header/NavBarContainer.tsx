@@ -3,7 +3,7 @@ import { Flex, useColorModeValue } from "@chakra-ui/react";
 const NavBarContainer = ({ children, ...props }): JSX.Element => {
     
     const bg = useColorModeValue("white", "gray.800");
-    const borderBottom = useColorModeValue("gray.400", "gray.700");
+    const borderBottom = useColorModeValue("gray.400", "gray.600");
 
     return (
         <Flex

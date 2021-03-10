@@ -1,6 +1,5 @@
-import { Text, useColorModeValue } from "@chakra-ui/react";
+import { Button, Text, useColorModeValue } from "@chakra-ui/react";
 import { useRouter } from "next/router";
-import MenuButton from "../../global/MenuButton";
 
 const FooterButtonItem = ({ children, to = "/" , ...props }) => {
     const router = useRouter();
@@ -8,7 +7,7 @@ const FooterButtonItem = ({ children, to = "/" , ...props }) => {
     const buttonColorHover = useColorModeValue("gray.700", "gray.300");
     const buttonColorActive = useColorModeValue("black", "white");
     return (
-        <MenuButton
+        <Button
             variant="unstyled"
             onClick={() => {
                 router.push(to);
@@ -25,7 +24,7 @@ const FooterButtonItem = ({ children, to = "/" , ...props }) => {
             <Text>
                 {children}
             </Text>
-        </MenuButton>
+        </Button>
     )
 }
 

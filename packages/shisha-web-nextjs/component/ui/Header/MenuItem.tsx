@@ -1,6 +1,5 @@
-import { Text, useColorModeValue } from "@chakra-ui/react";
+import { Button, Text, useColorModeValue } from "@chakra-ui/react";
 import { useRouter } from "next/router";
-import MenuButton from "../../global/MenuButton";
 
 
 const MenuItem = ({ children, to = "/", isActive = false, ...props }) => {
@@ -9,7 +8,7 @@ const MenuItem = ({ children, to = "/", isActive = false, ...props }) => {
     const buttonColorHover = useColorModeValue("gray.700", "gray.300");
     const buttonColorActive = useColorModeValue("black", "white");
     return (
-        <MenuButton
+        <Button
             variant="unstyled"
             isActive={isActive}
             onClick={() => {
@@ -26,7 +25,7 @@ const MenuItem = ({ children, to = "/", isActive = false, ...props }) => {
             <Text>
                 {children}
             </Text>
-        </MenuButton>
+        </Button>
     )
 }
 
