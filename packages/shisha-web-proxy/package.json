@@ -1,0 +1,15 @@
+{
+  "name": "shisha-web-proxy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "deploy:production": "vercel --prod -A vercel.production.json",
+    "deploy:staging": "vercel -A vercel.staging.json"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "vercel": "^21.3.3"
+  }
+}

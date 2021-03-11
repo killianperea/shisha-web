@@ -1,0 +1,12 @@
+{
+    "rewrites": [
+        {
+            "source": "\/studio(.*)",
+            "destination": "https://shisha-web-sanity-develop-killianperea.vercel.app"
+        },
+        {
+            "source": "/(.*)",
+            "destination": "https://shisha-web-nextjs-develop-killianperea.vercel.app"
+        }
+    ]
+}

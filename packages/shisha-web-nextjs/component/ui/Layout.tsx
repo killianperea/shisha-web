@@ -1,4 +1,3 @@
-import { useBreakpointValue } from "@chakra-ui/react";
 import Container from "./Container";
 import Content from "./Content";
 import Footer from "./Footer/Footer";
