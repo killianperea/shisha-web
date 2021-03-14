@@ -6,6 +6,7 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 import { Brand, Flavor, Tabacco } from './documents/Bussiness';
 import { MenuItem } from './documents/Application';
 import { LocaleString } from './objects';
+import Cookies from './documents/Application/Cookies';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -17,6 +18,7 @@ export default createSchema({
     LocaleString,
     //APPLICATION
     MenuItem,
+    Cookies,
     //BUSSINESS
     Brand,
     Tabacco,

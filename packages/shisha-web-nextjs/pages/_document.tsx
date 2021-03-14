@@ -4,7 +4,7 @@ import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/do
 class MyDocument extends Document<any> {
     static async getInitialProps(ctx: DocumentContext) {
         const initialProps = await Document.getInitialProps(ctx);
-        return { ...initialProps, locale: ctx.query.locale };
+        return { ...initialProps, locale: ctx.query.locale};
     }
 
     render(): JSX.Element {

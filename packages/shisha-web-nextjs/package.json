@@ -19,6 +19,7 @@
     "next": "10.0.7",
     "next-sanity": "^0.1.10",
     "react": "17.0.1",
+    "react-cookie-consent": "^6.2.3",
     "react-dom": "17.0.1",
     "react-icons": "^4.2.0"
   },

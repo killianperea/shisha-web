@@ -38,10 +38,13 @@ const Home: NextPage<{ locale: string, menuItems: MenuItemModel[] }> = ({ locale
 export const getStaticProps: GetStaticProps = async (ctx: GetStaticPropsContext<ParsedUrlQuery>) => {
 
     const menuItems = await SanityApi.getMenuItems();
+    const cookies = await SanityApi.getCookiesConsient();
+
     return {
         props: {
             locale: ctx.params?.locale,
-            menuItems: Utils.serialize(menuItems)
+            menuItems: Utils.serialize(menuItems),
+            cookies: Utils.serialize(cookies)
         },
     };
 };
